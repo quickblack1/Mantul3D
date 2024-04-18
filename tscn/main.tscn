@@ -109,6 +109,7 @@ shape = SubResource("BoxShape3D_8irq2")
 mesh = SubResource("BoxMesh_uslwe")
 
 [node name="BlueBall" parent="." instance=ExtResource("1_nkna7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2664, 28.024)
 
 [node name="RedBall" parent="." instance=ExtResource("3_ojhxv")]
 
@@ -320,6 +321,7 @@ theme_override_font_sizes/font_size = 30
 text = "PAUSED"
 
 [node name="HSlider" type="HSlider" parent="."]
+visible = false
 offset_right = 159.0
 offset_bottom = 16.0
 

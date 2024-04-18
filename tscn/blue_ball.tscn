@@ -16,7 +16,7 @@ height = 2.0
 
 [node name="BlueBall" type="CharacterBody3D"]
 process_mode = 1
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2664, 11.2715)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2664, 26.6073)
 collision_layer = 2
 collision_mask = 20
 script = ExtResource("1_2urcm")
