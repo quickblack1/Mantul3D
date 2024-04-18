@@ -186,7 +186,7 @@ offset_right = 55.5
 offset_bottom = 29.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -205,6 +205,7 @@ offset_right = 159.5
 offset_bottom = 79.5
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 0, 1)
 script = ExtResource("6_um1cj")
 
 [node name="PlayAgainButton" type="Button" parent="Control/ColorRect"]
@@ -213,6 +214,7 @@ offset_left = 117.5
 offset_top = 107.5
 offset_right = 205.5
 offset_bottom = 138.5
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Play Again"
 
 [node name="Boxes" type="Node3D" parent="."]
@@ -290,16 +292,17 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="Control2"]
+z_index = -1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -85.0
-offset_top = -52.0
-offset_right = 85.0
-offset_bottom = 52.0
+offset_left = -166.5
+offset_top = -130.0
+offset_right = 166.5
+offset_bottom = 130.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
@@ -311,14 +314,59 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -58.0
-offset_top = -21.0
-offset_right = 58.0
-offset_bottom = 21.0
+offset_left = -97.0
+offset_top = -103.0
+offset_right = 103.0
+offset_bottom = -61.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
-text = "PAUSED"
+text = "== PAUSED =="
+
+[node name="Quit" type="Button" parent="Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = 67.0
+offset_right = 23.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[node name="Replay" type="Button" parent="Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -15.5
+offset_right = 30.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Replay"
+
+[node name="Fullscreen" type="Button" parent="Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = 26.0
+offset_right = 45.0
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Fullscreen"
 
 [node name="HSlider" type="HSlider" parent="."]
 visible = false
@@ -330,3 +378,6 @@ offset_bottom = 16.0
 [connection signal="pressed" from="Control/ColorRect/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control2/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Control2/Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="Control2/Fullscreen" to="." method="_on_fullscreen_pressed"]

@@ -5,6 +5,7 @@ var numRedBox = 8
 var paused : bool = false
 var bolaBiru = preload("res://tscn/blue_ball.tscn")
 var bolaMerah = preload("res://tscn/red_ball.tscn")
+var windowMode
 
 @onready var numBlueBoxLabel = $Control/BlueLabel/BlueScore
 @onready var numRedBoxLabel = $Control/RedLabel/RedScore
@@ -16,6 +17,7 @@ var bolaMerah = preload("res://tscn/red_ball.tscn")
 #@onready var mob = $Boxes/BlueBox
 #@onready var mob2 = $Boxes/RedBox
 @onready var pauseLabel = $Control2
+@onready var fullscreenBtn = $Control2/Fullscreen
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,6 +30,8 @@ func _ready():
 	blueBall.squashed.connect($Control._on_Mob_squashed)
 	redBall.squashed2.connect($Control._on_Mob_squashed2)
 	#control.sPauseGame.connect(pause_game)
+	
+	windowMode = "windowed"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -101,3 +105,24 @@ func _unhandled_input(event):
 		#paused = true
 		#get_tree().reload_current_scene()
 		#print(get_tree().paused)
+
+
+func _on_replay_pressed():
+	get_tree().paused = false
+	get_tree().reload_current_scene()
+
+
+func _on_quit_pressed():
+	get_tree().quit()
+
+
+func _on_fullscreen_pressed():
+	if windowMode == "windowed":
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		windowMode = "fullscreen"
+		fullscreenBtn.text = "Exit Fullscreen"
+	
+	elif windowMode == "fullscreen":
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		windowMode = "windowed"
+		fullscreenBtn.text = "Fullscreen"
