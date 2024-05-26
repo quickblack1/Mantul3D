@@ -5,6 +5,8 @@ var direction = Vector3(randf() * 2 - 1, 0, randf() * 2 - 1)
 var pantulan = Vector3(speed, 0, speed)
 var collision
 
+@onready var bounceSound = $AudioStreamPlayer
+
 signal squashed
 
 # Called when the node enters the scene tree for the first time.
@@ -32,6 +34,7 @@ func _physics_process(delta):
 		#velocity = velocity.bounce(collision.get_normal())
 		velocity = velocity.bounce(collision.get_normal())
 		if collision.get_collider().has_method("hit"):
+			bounceSound.play()
 			squashed.emit()
 			#var mob = collision.get_collider()
 			#mob.squash(1)
