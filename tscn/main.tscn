@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b4g2hpqy1mof4"]
+[gd_scene load_steps=21 format=3 uid="uid://b4g2hpqy1mof4"]
 
 [ext_resource type="Script" path="res://tscn/main.gd" id="1_j5nsf"]
 [ext_resource type="PackedScene" uid="uid://b4oypce8sv10c" path="res://tscn/blue_ball.tscn" id="1_nkna7"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://brd6trgfsa4v8" path="res://tscn/blue_box.tscn" id="5_ji488"]
 [ext_resource type="Script" path="res://gd/ColorRect.gd" id="6_um1cj"]
 [ext_resource type="Script" path="res://gd/blueLabel.gd" id="6_xdd06"]
+[ext_resource type="PackedScene" uid="uid://bueb4ntn7fj08" path="res://tscn/Menu.tscn" id="10_gfnx7"]
+[ext_resource type="AudioStream" uid="uid://waqggb7axv3h" path="res://wav/Juhani Junkala [Retro Game Music Pack] Level 3.wav" id="10_xaath"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r8mse"]
 
@@ -282,102 +284,20 @@ offset_right = 1509.0
 offset_bottom = 383.0
 text = "Add Red Ball"
 
-[node name="Control2" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="Control2"]
-z_index = -1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -166.5
-offset_top = -130.0
-offset_right = 166.5
-offset_bottom = 130.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Pause" type="Label" parent="Control2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -97.0
-offset_top = -103.0
-offset_right = 103.0
-offset_bottom = -61.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 30
-text = "== PAUSED =="
-
-[node name="Quit" type="Button" parent="Control2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -19.0
-offset_top = 67.0
-offset_right = 23.0
-offset_bottom = 98.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Quit"
-
-[node name="Replay" type="Button" parent="Control2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -30.0
-offset_top = -15.5
-offset_right = 30.0
-offset_bottom = 15.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Replay"
-
-[node name="Fullscreen" type="Button" parent="Control2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -42.0
-offset_top = 26.0
-offset_right = 45.0
-offset_bottom = 57.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Fullscreen"
+[node name="Control2" parent="." instance=ExtResource("10_gfnx7")]
 
 [node name="HSlider" type="HSlider" parent="."]
 visible = false
 offset_right = 159.0
 offset_bottom = 16.0
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_xaath")
+volume_db = -5.0
+
 [connection signal="sDeleteBall" from="Control" to="." method="_on_control_s_delete_ball"]
 [connection signal="sPauseGame" from="Control" to="." method="_on_control_s_pause_game"]
 [connection signal="pressed" from="Control/ColorRect/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Control2/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="Control2/Replay" to="." method="_on_replay_pressed"]
-[connection signal="pressed" from="Control2/Fullscreen" to="." method="_on_fullscreen_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

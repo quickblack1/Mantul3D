@@ -30,3 +30,5 @@ script = ExtResource("2_b6jwy")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.53904)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

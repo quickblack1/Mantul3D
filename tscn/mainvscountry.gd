@@ -7,9 +7,8 @@ var bolaBiru = preload("res://tscn/blue_ball.tscn")
 var bolaMerah = preload("res://tscn/red_ball.tscn")
 var windowMode
 
-
-@onready var numBlueBoxLabel = $Control/CountryName1/BlueScore
-@onready var numRedBoxLabel = $Control/CountryName2/RedScore
+@onready var numBlueBoxLabel = $Control/BlueLabel/BlueScore
+@onready var numRedBoxLabel = $Control/RedLabel/RedScore
 #@onready var waklu = $BlueBall
 #@onready var waklu = $Control
 @onready var blueBall = $BlueBall
@@ -17,8 +16,8 @@ var windowMode
 @onready var control = $Control
 #@onready var mob = $Boxes/BlueBox
 #@onready var mob2 = $Boxes/RedBox
-@onready var pauseLabel = $Menu
-
+@onready var pauseLabel = $Control2
+@onready var fullscreenBtn = $Control2/Fullscreen
 @onready var bgSound = $AudioStreamPlayer
 
 # Called when the node enters the scene tree for the first time.
@@ -117,6 +116,19 @@ func _on_replay_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
+
+
+func _on_fullscreen_pressed():
+	if windowMode == "windowed":
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		windowMode = "fullscreen"
+		fullscreenBtn.text = "Exit Fullscreen"
+	
+	elif windowMode == "fullscreen":
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		windowMode = "windowed"
+		fullscreenBtn.text = "Fullscreen"
+
 
 func _on_audio_stream_player_finished():
 	bgSound.play()
