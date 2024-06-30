@@ -113,7 +113,7 @@ shape = SubResource("BoxShape3D_8irq2")
 mesh = SubResource("BoxMesh_uslwe")
 
 [node name="BlueBall" parent="." instance=ExtResource("2_iom21")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2664, 28.024)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2664, 31.6073)
 
 [node name="RedBall" parent="." instance=ExtResource("3_be6er")]
 
@@ -162,10 +162,11 @@ color = Color(0, 0.15, 1, 1)
 
 [node name="CountryName2" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 1409.0
-offset_top = 240.0
-offset_right = 1490.0
-offset_bottom = 263.0
+offset_left = 1420.0
+offset_top = 228.0
+offset_right = 1501.0
+offset_bottom = 251.0
+horizontal_alignment = 1
 
 [node name="RedScore" type="Label" parent="Control/CountryName2"]
 layout_mode = 0
@@ -218,9 +219,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -159.5
+offset_left = -244.0
 offset_top = -79.5
-offset_right = 159.5
+offset_right = 244.0
 offset_bottom = 79.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -229,10 +230,10 @@ script = ExtResource("6_gpejn")
 
 [node name="PlayAgainButton" type="Button" parent="Control/ColorRect"]
 layout_mode = 0
-offset_left = 117.5
-offset_top = 107.5
-offset_right = 205.5
-offset_bottom = 138.5
+offset_left = 205.0
+offset_top = 113.0
+offset_right = 293.0
+offset_bottom = 144.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Play Again"
 
@@ -240,130 +241,130 @@ text = "Play Again"
 script = ExtResource("7_r0g4b")
 
 [node name="RedBox" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.301, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.3128, 1.30081, -17)
 
 [node name="RedBox2" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.30081, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3128, 1.30081, -17)
 
 [node name="RedBox3" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1.30081, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3128, 1.30081, -17)
 
 [node name="RedBox4" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1.30081, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31283, 1.30081, -17)
 
 [node name="RedBox5" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 1.30081, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6872, 1.30081, -17)
 
 [node name="RedBox6" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 1.30081, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6872, 1.30081, -17)
 
 [node name="RedBox7" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.311, 1.30081, -9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.6872, 1.30081, -17)
 
 [node name="RedBox8" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.311, 1.30081, -9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.3128, 1.30081, -11)
 
 [node name="RedBox9" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99646, 1.301, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.3128, 1.30081, -11)
 
 [node name="RedBox10" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1.30081, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.31283, 1.30081, -11)
 
 [node name="RedBox11" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1.30081, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.68717, 1.30081, -11)
 
 [node name="RedBox12" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1.30081, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6872, 1.30081, -11)
 
 [node name="RedBox13" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 1.30081, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.6872, 1.30081, -11)
 
 [node name="RedBox14" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 1.30081, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.6872, 1.30081, -11)
 
 [node name="RedBox15" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 1.30081, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.3128, 1.30081, -5)
 
 [node name="RedBox16" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.311, 1.30081, -9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3128, 1.30081, -5)
 
 [node name="RedBox17" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 1.30081, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3128, 1.30081, -5)
 
 [node name="RedBox18" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.689, 1.30081, -9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31283, 1.30081, -5)
 
 [node name="RedBox19" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.68901, 1.30081, -9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6872, 1.30081, -5)
 
 [node name="RedBox20" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.31099, 1.30081, -9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6872, 1.30081, -5)
 
 [node name="RedBox21" parent="Boxes" instance=ExtResource("8_jrcs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.311, 1.30081, -9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.6872, 1.30081, -5)
 
 [node name="BlueBox" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.2466, 1.30081, 4.18188)
 
 [node name="BlueBox2" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2466, 1.30081, 4.18188)
 
 [node name="BlueBox3" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2466, 1.30081, 4.18188)
 
 [node name="BlueBox4" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7534, 1.30081, 4.18188)
 
 [node name="BlueBox5" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7534, 1.30081, 4.18188)
 
 [node name="BlueBox6" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.7534, 1.30081, 4.18188)
 
 [node name="BlueBox7" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.7534, 1.30081, 4.18188)
 
 [node name="BlueBox8" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.2466, 1.30081, 10.1819)
 
 [node name="BlueBox9" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.2466, 1.30081, 10.1819)
 
 [node name="BlueBox10" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2466, 1.30081, 10.1819)
 
 [node name="BlueBox11" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2466, 1.30081, 10.1819)
 
 [node name="BlueBox12" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7534, 1.30081, 10.1819)
 
 [node name="BlueBox13" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7534, 1.30081, 10.1819)
 
 [node name="BlueBox14" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.7534, 1.30081, 10.1819)
 
 [node name="BlueBox15" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.2466, 1.30081, 16.1819)
 
 [node name="BlueBox16" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2466, 1.30081, 16.1819)
 
 [node name="BlueBox17" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2466, 1.30081, 16.1819)
 
 [node name="BlueBox18" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7534, 1.30081, 16.1819)
 
 [node name="BlueBox19" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7534, 1.30081, 16.1819)
 
 [node name="BlueBox20" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.7534, 1.30081, 16.1819)
 
 [node name="BlueBox21" parent="Boxes" instance=ExtResource("9_e04b5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.08, 1.301, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.7534, 1.30081, 16.1819)
 
 [node name="Button" type="Button" parent="."]
 offset_left = 109.0
